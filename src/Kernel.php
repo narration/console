@@ -42,6 +42,10 @@ final class Kernel
     {
         $application = new Application('Narrative', '@dev');
 
+        foreach ($application->all() as $command) {
+            $command->setHidden(true);
+        }
+
         $application->addCommands($commands);
 
         return new self($application);
@@ -54,6 +58,6 @@ final class Kernel
      */
     public function dispatch(InputInterface $inputInterface): void
     {
-        $this->application->run($inputInterface);
+        $this->application->$this->application->run($inputInterface);
     }
 }
