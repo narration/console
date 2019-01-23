@@ -1,0 +1,10 @@
+includes:
+    - vendor/narration/phpstan-rules/rules.neon
+
+parameters:
+    ignoreErrors:
+    reportUnmatchedIgnoredErrors: false
+    level: max
+    paths:
+        - src
+        - tests
