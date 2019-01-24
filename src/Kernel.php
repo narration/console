@@ -58,6 +58,6 @@ final class Kernel
      */
     public function dispatch(InputInterface $inputInterface): void
     {
-        $this->application->$this->application->run($inputInterface);
+        $this->application->run($inputInterface);
     }
 }
