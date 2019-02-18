@@ -34,11 +34,11 @@ final class Kernel
     }
 
     /**
-     * @param  \Narration\Console\Command[] $commands
+     * @param  mixed $commands
      *
      * @return \Narration\Console\Kernel
      */
-    public static function attach(array $commands): self
+    public static function withCommands(array $commands): self
     {
         $application = new Application('Narrative', '@dev');
 
@@ -46,7 +46,9 @@ final class Kernel
             $command->setHidden(true);
         }
 
-        $application->addCommands($commands);
+        foreach ($commands as $name => $callable) {
+            $application->add(new InvokableCommand($name, $callable));
+        }
 
         return new self($application);
     }
