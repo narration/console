@@ -1,5 +1,5 @@
 {
-    "name": "narration/console",
+    "name": "narration/testing",
     "description": "The Narration Framework.",
     "keywords": [
         "narration",
@@ -14,10 +14,8 @@
         }
     ],
     "require": {
-        "php": "^7.2"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^7.5",
+        "php": "^7.2",
+        "phpunit/phpunit": "^8.0",
         "phpstan/phpstan": "^0.11",
         "narration/phpstan-rules": "dev-master"
     },
@@ -30,7 +28,7 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Narration\\Console\\": "src/"
+            "Narration\\Testing\\": "src/"
         }
     },
     "config": {
