@@ -32,11 +32,11 @@ final class Router
 
     /**
      * @param string $name
-     * @param callable $callable
+     * @param string $invokable
      */
-    public function command(string $name, callable $callable): void
+    public function command(string $name, string $invokable): void
     {
-        $instance = $this->container->get($callable);
+        $instance = $this->container->get($invokable);
 
         $this->commands[] = new InvokableCommand($name, $instance);
     }

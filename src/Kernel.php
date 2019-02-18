@@ -37,8 +37,8 @@ final class Kernel
             $command->setHidden(true);
         }
 
-        foreach ($commands as $name => $callable) {
-            $application->add(new InvokableCommand($name, $callable));
+        foreach ($commands as $command) {
+            $application->add($command);
         }
 
         return new self($application);
