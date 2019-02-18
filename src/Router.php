@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Narration\Console;
 
+use Psr\Container\ContainerInterface;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Input\InputInterface;
 
