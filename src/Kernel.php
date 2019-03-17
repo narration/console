@@ -37,7 +37,7 @@ final class Kernel
             $command->setHidden(true);
         }
 
-        foreach ($commands as $command) {
+        foreach ($router->getCommands() as $command) {
             $application->add($command);
         }
 
