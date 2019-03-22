@@ -19,10 +19,13 @@ class InvokableCommand extends BaseCommand
      *
      * @param string $name
      * @param callable $callable
+     * @param array $definition
      */
-    public function __construct(string $name, callable $callable)
+    public function __construct(string $name, callable $callable, array $definition = [])
     {
         parent::__construct($name);
+
+        $this->setDefinition($definition);
 
         $this->callable = $callable;
     }
