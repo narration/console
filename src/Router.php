@@ -33,12 +33,13 @@ final class Router
     /**
      * @param string $name
      * @param string $invokable
+     * @param array $definition
      */
-    public function command(string $name, string $invokable): void
+    public function command(string $name, string $invokable, array $definition = []): void
     {
         $instance = $this->container->get($invokable);
 
-        $this->commands[] = new InvokableCommand($name, $instance);
+        $this->commands[] = new InvokableCommand($name, $instance, $definition);
     }
 
     /**
