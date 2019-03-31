@@ -16,6 +16,13 @@ final class Router
     private $container;
 
     /**
+     * Holds the default command.
+     *
+     * @var string
+     */
+    private $default = 'list';
+
+    /**
      * @var array
      */
     private $commands;
@@ -49,7 +56,17 @@ final class Router
      */
     public function setDefault(string $name): void
     {
-        $this->application->setDefaultCommand($name);
+        $this->default = $name;
+    }
+
+    /**
+     * Sets the default command.
+     *
+     * @param string  $name
+     */
+    public function getDefault(string $name): string
+    {
+        return $this->default;
     }
 
     /**
