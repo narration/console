@@ -43,6 +43,16 @@ final class Router
     }
 
     /**
+     * Sets the default command.
+     *
+     * @param string  $name
+     */
+    public function setDefault(string $name): void
+    {
+        $this->application->setDefaultCommand($name);
+    }
+
+    /**
      * @return array
      */
     public function getCommands(): array
