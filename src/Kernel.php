@@ -41,6 +41,8 @@ final class Kernel
             $application->add($command);
         }
 
+        $application->setDefaultCommand($router->getDefault());
+
         return new self($application);
     }
 

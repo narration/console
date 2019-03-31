@@ -60,11 +60,11 @@ final class Router
     }
 
     /**
-     * Sets the default command.
+     * Gets the default command.
      *
-     * @param string  $name
+     * @return  string
      */
-    public function getDefault(string $name): string
+    public function getDefault(): string
     {
         return $this->default;
     }
